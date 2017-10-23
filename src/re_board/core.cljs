@@ -1,6 +1,7 @@
 (ns re-board.core
   (:require [reagent.core :as reagent]
             [re-frame.core :as re-frame]
+            [day8.re-frame.http-fx]
             [re-board.events :as events]
             [re-board.routes :as routes]
             [re-board.views :as views]
