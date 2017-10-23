@@ -9,7 +9,7 @@
 
   :min-lein-version "2.5.3"
 
-  :source-paths ["src/clj"]
+  :source-paths ["src" "dev"]
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
 
@@ -29,7 +29,7 @@
   :cljsbuild
   {:builds
    [{:id           "dev"
-     :source-paths ["src/cljs"]
+     :source-paths ["src"]
      :figwheel     {:on-jsload "re-board.core/mount-root"}
      :compiler     {:main                 re-board.core
                     :output-to            "resources/public/js/compiled/app.js"
@@ -42,7 +42,7 @@
                     }}
 
     {:id           "min"
-     :source-paths ["src/cljs"]
+     :source-paths ["src"]
      :compiler     {:main            re-board.core
                     :output-to       "resources/public/js/compiled/app.js"
                     :optimizations   :advanced
